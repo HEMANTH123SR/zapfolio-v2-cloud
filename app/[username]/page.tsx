@@ -92,7 +92,7 @@ export default async function UserProfilePage({ params }: { params: { username: 
         return (
             <div className={`min-h-screen bg-[#EFEBE5] text-black ${hackerMedium.className}`}
                 style={{
-                    backgroundImage: "url('/bg/7.png')",
+                    backgroundImage: "url('/bg/10.png')",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
@@ -104,7 +104,7 @@ export default async function UserProfilePage({ params }: { params: { username: 
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
                     {/* Hero Section */}
                     <section className="py-12">
-                        <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+                        <div className="flex flex-col md:flex-row items-center md:items-start gap-2">
                             <div className="md:w-2/3 text-center md:text-left">
                                 <h1 className="text-4xl md:text-5xl font-bold mb-4">
                                     {`Hi, I'm ${userData.firstName} ${userData.lastName}`}
@@ -134,8 +134,10 @@ export default async function UserProfilePage({ params }: { params: { username: 
                                     )}
                                 </div>
                             </div>
-                            <div className="md:w-1/3">
-                                <div className="w-32 h-32 md:w-40 md:h-40 overflow-hidden rounded-full mx-auto md:mx-0 md:ml-auto">
+
+
+                            <div className="">
+                                <div className="w-32 h-32 md:w-44 md:h-44 border border-black overflow-hidden rounded-full mx-auto md:mx-0 md:ml-auto">
                                     {userData.image ? (
                                         <Image
                                             src={userData.image}
@@ -154,6 +156,8 @@ export default async function UserProfilePage({ params }: { params: { username: 
                                     )}
                                 </div>
                             </div>
+
+
                         </div>
                     </section>
 
@@ -181,12 +185,12 @@ export default async function UserProfilePage({ params }: { params: { username: 
                             <h2 className="text-3xl font-bold mb-6">Career</h2>
 
                             <div className="max-w-3xl">
-                                <p className="mb-6">{` I started as a self-taught developer at the age of 14, and it's been a rollercoaster ride since then.`}
+                                <p className="mb-6">{`  Get to know how I started my career `}
                                 </p>
 
                                 {userData.jobExperience && userData.jobExperience.map((job, index) => (
                                     <div key={index} className="mb-8">
-                                        <div className="flex flex-col gap-3">
+                                        <div className="flex flex-col gap-3 border border-black p-5 rounded-xl">
                                             <div>
                                                 <h3 className="text-xl font-semibold">{job.company?.name}</h3>
                                                 {job.employmentType && <p className="text-sm">{job.employmentType}</p>}
@@ -361,7 +365,7 @@ export default async function UserProfilePage({ params }: { params: { username: 
                 </div>
 
                 {/* Footer */}
-                <footer className="py-8 mt-12">
+                <footer className="py-8 mt-12 ">
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex justify-between items-center">
                             <div>
@@ -371,8 +375,8 @@ export default async function UserProfilePage({ params }: { params: { username: 
                             </div>
 
                             <div>
-                                <a href="https://github.com/sponsors/SkidGod4444" className="text-sm hover:underline">
-                                    Sponsor
+                                <a href="https://zapfolio.in" className="text-sm hover:underline">
+                                    Build Your Portfolio
                                 </a>
                             </div>
                         </div>
