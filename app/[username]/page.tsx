@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import type { UserData } from "@/lib/userdata.interface"
-import { Calendar, GraduationCap, Languages, MapPin, } from "lucide-react"
+import { GraduationCap, Languages, MapPin, } from "lucide-react"
 import { Metadata } from "next"
 import { hackerMedium } from "@/fonts/font"
 
@@ -82,13 +82,7 @@ export default async function UserProfilePage({ params }: { params: Promise<{ us
         const hasSkills = userData.skills && userData.skills.length > 0;
         const hasLanguages = userData.languages && userData.languages.length > 0;
 
-        // Get current time for the clock display
-        const now = new Date();
-        const timeString = now.toLocaleTimeString('en-US', {
-            hour: '2-digit',
-            minute: '2-digit',
-            hour12: false
-        });
+
 
         return (
             <div className={`min-h-screen bg-[#EFEBE5] text-black ${hackerMedium.className}`}
@@ -98,8 +92,6 @@ export default async function UserProfilePage({ params }: { params: Promise<{ us
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover"
                 }}
-
-
             >
                 {/* Main content container */}
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
@@ -123,10 +115,7 @@ export default async function UserProfilePage({ params }: { params: Promise<{ us
                                         </div>
                                     )}
 
-                                    <div className="flex items-center text-sm">
-                                        <Calendar className="w-4 h-4 mr-1" />
-                                        {timeString} {userData.location?.countryCode || 'local'} time
-                                    </div>
+
 
                                     {userData.industry && (
                                         <div className="text-sm">
