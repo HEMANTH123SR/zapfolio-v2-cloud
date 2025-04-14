@@ -101,7 +101,7 @@ export default async function UserProfilePage({ params }: { params: Promise<{ us
                             <div className="md:w-2/3 text-center md:text-left">
                                 <h1 className="text-4xl md:text-5xl font-bold mb-4">
                                     {`Hi, I'm ${userData.firstName} ${userData.lastName}`}
-                                    <span className="ml-2 inline-block">👻</span>
+
                                 </h1>
 
                                 <p className="text-xl mb-6">{userData.headline || `${userData.industry || ''} professional`}</p>
