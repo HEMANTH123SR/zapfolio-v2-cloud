@@ -244,25 +244,7 @@ const ProfileContent: React.FC<ProfileContentProps> = ({ userData }) => {
                                                 {lang.proficiency && <span className="text-sm">{lang.proficiency}</span>}
                                             </div>
 
-                                            {lang.proficiency && (
-                                                <div className="w-full bg-[#EFEBE5] border border-black rounded-full h-2 mt-2">
-                                                    <div
-                                                        className="bg-black h-2 rounded-full"
-                                                        style={{
-                                                            width:
-                                                                lang.proficiency === "Native"
-                                                                    ? "100%"
-                                                                    : lang.proficiency === "Fluent"
-                                                                        ? "90%"
-                                                                        : lang.proficiency === "Professional"
-                                                                            ? "75%"
-                                                                            : lang.proficiency === "Intermediate"
-                                                                                ? "50%"
-                                                                                : "25%",
-                                                        }}
-                                                    ></div>
-                                                </div>
-                                            )}
+
                                         </div>
                                     ))}
                                 </div>
